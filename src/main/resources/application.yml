@@ -1,0 +1,22 @@
+server:
+  port: 16080
+  shutdown: graceful
+
+logging:
+  pattern:
+    console:
+  file:
+    name: ../logs/spring.log
+  logback:
+    rollingpolicy:
+      max-file-size: 1GB
+      file-name-pattern:
+
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dhkim9179/git-config

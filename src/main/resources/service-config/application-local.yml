@@ -1,0 +1,32 @@
+#서버 설정
+server:
+  shutdown: graceful
+
+# Spring 설정
+spring:
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://172.105.223.165:3306/dominic_db
+    username: root
+    password: qwer1234!
+
+#mybatis 설정
+mybatis:
+  mapper-location: com.dominic.project
+  type-alias-package: com.dominic.project
+
+logging:
+  charset:
+    console: utf8
+    file: utf8
+  group:
+    application: com.dominic.project
+  level:
+    jdbc.sqltiming: INFO
+    jdbc.resultsettable: INFO
+    jdbc.sqlonly: OFF
+    jdbc.audit: OFF
+    jdbc.resultset: OFF
+    jdbc.connection: OFF
+    application: DEBUG
+    root: INFO
