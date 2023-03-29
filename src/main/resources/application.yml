@@ -9,4 +9,4 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/dhkim9179/git-config
+          uri: https://github.com/dhkim9179/git-config.git
